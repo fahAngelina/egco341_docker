@@ -14,6 +14,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.DOCKERPW }}" | docker login -u angelina108 --password-dckr_pat_kU8pM0OXo8Ue8rLyh6WgkrDU8hM
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "angelina108" --password-stdin
         docker image build -t angelina108/egco341_docker:latest .
         docker push angelina108/egco341_docker:latest
